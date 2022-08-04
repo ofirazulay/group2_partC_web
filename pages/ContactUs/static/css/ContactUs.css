@@ -1,0 +1,114 @@
+:root {
+    --green:rgb(41, 77, 44);
+    --darkgreen:rgb(9, 63, 33);
+    --darkgreen2:rgb(43, 74, 57);
+    --darkgreen3: rgb(138, 138, 112);
+    --darkWhite : rgb(232, 226, 226);
+    --darkWhite2 : rgb(107, 135, 119);
+    --darkWhite3 : rgb(117, 141, 127);
+
+    --lightgreen : rgb(70, 101, 82);
+
+    --White : rgb(255, 255, 255);
+    --grey : rgb(165, 178, 171);
+}
+
+
+
+
+
+Body{
+    background-image: url(../media/backGroundBetonT1.jpg);
+}
+
+
+
+
+#getDetailsContact{
+    display: table;
+    margin-left:500px ;
+    margin-top: 80px;
+    color:var(--lightgreen);
+    font-size :16px;
+    text-align: left;
+    font-family:font2;
+    padding: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+}
+
+.dataContact{
+    padding: 15px;
+    width: 200px;
+    height: 6px;
+    text-align: center;
+    border-bottom: 3px solid rgb(44, 51, 44);
+    background-color:transparent;
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    border-radius: 0px;
+}
+
+
+#freeTextContact{
+    width: 400px;
+}
+
+input{
+    padding: 15px;
+    width: 200px;
+    height: 6px;
+    background-color:white;
+    color: var(--darkWhite2);
+    text-align: center;
+    border-radius: 7px;
+
+}
+
+
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+  #message p {
+    padding: 10px 35px;
+    font-size: 18px;
+  }
+
+
+
+/*
+ * Optional: Makes the sample page fill the window.
+ */
+ html,
+ body,
+ #contactbody {
+   height: 100%;
+   margin-left: 70;
+   padding: 0;
+  }
+
+
+#topgap{
+  margin-top: 180px;
+}
+
+#ConfirmMessage{
+    font-size: 20px;
+    padding: 2px;
+    margin-left: 0px;
+}

@@ -1,0 +1,31 @@
+:root {
+    --green:rgb(41, 77, 44);
+    --darkgreen:rgb(9, 63, 33);
+    --darkgreen2:rgb(43, 74, 57);
+    --darkgreen3: rgb(138, 138, 112);
+    --darkWhite : rgb(232, 226, 226);
+    --darkWhite2 : rgb(107, 135, 119);
+    --darkWhite3 : rgb(117, 141, 127);
+
+    --lightgreen : rgb(70, 101, 82);
+
+    --White : rgb(255, 255, 255);
+    --grey : rgb(165, 178, 171);
+}
+
+
+
+body{
+  background-image: url(../media/backGroundBetonT1.jpg);
+}
+
+
+
+h1{
+  text-align: center;
+  font-size: 50px;
+  font-family: font2;
+  padding-top: 30px;
+  color: #3d5d4a;
+
+}

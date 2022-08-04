@@ -1,0 +1,12 @@
+INSERT INTO web_project_g2.therapists (id, full_name, branch_name, treatment_type) VALUES (1, 'Cristie Cossem', 'Beersheba Spa', 'Shiatsu');
+INSERT INTO web_project_g2.therapists (id, full_name, branch_name, treatment_type) VALUES (2, 'Leta Triner', 'Beersheba Spa', 'Reflexology');
+INSERT INTO web_project_g2.therapists (id, full_name, branch_name, treatment_type) VALUES (3, 'Quintana Wadmore', 'Beersheba Spa', 'Chinese acupuncture');
+INSERT INTO web_project_g2.therapists (id, full_name, branch_name, treatment_type) VALUES (4, 'Beniamino Coules', 'Haifa Spa', 'Shiatsu');
+INSERT INTO web_project_g2.therapists (id, full_name, branch_name, treatment_type) VALUES (5, 'Peggi Hanse', 'Haifa Spa', 'Reflexology');
+INSERT INTO web_project_g2.therapists (id, full_name, branch_name, treatment_type) VALUES (6, 'Samara Bebbell', 'Haifa Spa', 'Chinese acupuncture');
+INSERT INTO web_project_g2.therapists (id, full_name, branch_name, treatment_type) VALUES (7, 'Debbie Wightman', 'Sea Spa TLV', 'Shiatsu');
+INSERT INTO web_project_g2.therapists (id, full_name, branch_name, treatment_type) VALUES (8, 'Craggie Marten', 'Sea Spa TLV', 'Reflexology');
+INSERT INTO web_project_g2.therapists (id, full_name, branch_name, treatment_type) VALUES (9, 'Joella Toomer', 'Sea Spa TLV', 'Chinese acupuncture');
+INSERT INTO web_project_g2.therapists (id, full_name, branch_name, treatment_type) VALUES (10, 'Arleyne Wardle', 'The red spa', 'Shiatsu');
+INSERT INTO web_project_g2.therapists (id, full_name, branch_name, treatment_type) VALUES (11, 'Sybyl Woolager', 'The red spa', 'Reflexology');
+INSERT INTO web_project_g2.therapists (id, full_name, branch_name, treatment_type) VALUES (12, 'Burch Macari', 'The red spa', 'Chinese acupuncture');

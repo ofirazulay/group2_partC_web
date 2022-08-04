@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'userNotFound' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('userNotFound.static', filename='css/userNotFound.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+
+    <h1>User Not Found, please Try again</h1>
+
+{% endblock %}
+
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('userNotFound.static', filename='js/userNotFound.js') }}"></script>
+{% endblock %}
+
+{% block page_body_footer %}{% endblock %}

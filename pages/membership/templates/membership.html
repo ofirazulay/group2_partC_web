@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'membership' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('membership.static', filename='css/membership.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+
+ <h1>your Membership Cards</h1>
+ {% for category, message in get_flashed_messages(with_categories=True) %}
+        <div class="{{category}}" id="alertDiv">
+        <h3> {{category}}:</h3>
+        <h4 id="flashed_messages">{{ message }}</h4>
+        <a class="close" style="display:block; text-decoration: none;" onclick="closeFunction()">&times;</a>
+        </div>
+    {% endfor %}
+
+
+
+    <table id="table1">
+ <thead>
+            <tr>
+              <th>Treatment Type</th>
+              <th>Number of treatments remaining</th>
+              <th>Total number of treatments</th>
+              </td></th>
+            </tr>
+
+            </thead>
+    <tbody>
+      {% for membershipCard in membership_card %}
+        <tr>
+          <td>{{ membershipCard.treatment_type }}</td>
+          <td>{{ membershipCard.totalNumOfTreatmentsRemaining }}</td>
+          <td>{{ membershipCard.totalNumOfTreatmentsTotal }}</td>
+            {% endfor %}
+            </tbody>
+          </table>
+
+<button id="purchaseMore" onclick="">To purchase more Treatments </button>
+
+
+
+    <!------------------------------------------- MODAL POP UP ------------------------------------------->
+<!-- The Modal -->
+<div id="myModalD" class="modalD">
+
+  <!-- Modal content -->
+  <div  class="modal-contentD">
+    <span class="closeD">&times;</span>
+
+
+    <div class="price_list">
+        <h1  id="inpTEXTtitle" >MENU</h1>
+
+{#        <form  method="post" action="/moveToPayment" >#}
+{#          <!-- Shiatsu - single treatment -->#}
+{##}
+{#          <input type="radio" id="Shiatsu1" name="Treatment" value="Shiatsu1"  required onclick="checkPrice()" checked >#}
+{#          <label for="Shiatsu1"  class="inpTEXT">#}
+{#            Shiatsu - single treatment#}
+{#          </label><br>#}
+{#          <!-- Shiatsu - 10 treatments -->#}
+{#          <input type="radio" id="Shiatsu10" name="Treatment" value="Shiatsu10" onclick="checkPrice()"  >#}
+{#          <label for="Shiatsu10" class="inpTEXT">#}
+{#            Shiatsu - 10 treatments#}
+{#          </label><br>#}
+{##}
+{##}
+{#          <input type="radio" id="Chinese1" name="Treatment" value="Chinese1" onclick="checkPrice()" >#}
+{#          <label for="Chinese1"  class="inpTEXT">#}
+{#            Chinese acupuncture - single treatment#}
+{#          </label><br>#}
+{##}
+{#          <input type="radio" id="Chinese10" name="Treatment" value="Chinese10"  onclick="checkPrice()" >#}
+{#          <label for="Chinese10"  class="inpTEXT">#}
+{#            Chinese acupuncture - 10 treatments#}
+{#        </label><br>#}
+{##}
+{#          <input type="radio" id="Reflexology1" name="Treatment" value="Reflexology1" onclick="checkPrice()" >#}
+{#          <label for="Reflexology1"  class="inpTEXT">#}
+{#            Reflexology - single treatment#}
+{#          </label><br>#}
+{##}
+{#          <input type="radio" id="Reflexology10" name="Treatment" value="Reflexology10"  onclick="checkPrice()" >#}
+{#          <label for="Reflexology10"  class="inpTEXT">#}
+{#            Reflexology - 10 treatments#}
+{#        </label><br>#}
+{#<br>#}
+{##}
+{##}
+{##}
+{#         <br> <label  class="inpTEXT" id="price">Price: 160 ILS </label><br>#}
+{##}
+{##}
+{#  <div class="purchase_btn" id="Modalbtn">#}
+{##}
+{#        <br> <br><button  class="click"  type="submit">Quick purchase</button><br>#}
+{#      </div>#}
+{##}
+{#    </form>#}
+
+ <form  method="post" action="/moveToPayment">
+    <div>
+    <lable>Chinese acupuncture</lable>
+    <input name="ctreatment" type="number" max="10" min="0" required>
+
+    </div>
+      <br>
+        <div>
+    <lable>Reflexology</lable>
+            <input name="rtreatment" type="number" max="10" min="0" required>
+        </div>
+      <br>
+        <div>
+    <lable>Shiatsu</lable>
+            <input name="streatment" type="number" max="10" min="0" required>
+
+        </div>
+    <div>
+        <button  id="submitContact" type="submit" >Proceed</button>
+    </div>
+ </form>
+
+       </div>
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}
+
+{% block page_body_footer %}{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('membership.static', filename='js/membership.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'signUp' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('signUp.static', filename='css/signUp.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+
+
+     {% for category, message in get_flashed_messages(with_categories=True) %}
+        {% if category=='error' %}
+        <div class="{{category}}" id="alertDiv">
+        <h3> {{category}}:</h3>
+        <h4 id="flashed_messages">{{ message }}</h4>
+               {% endif %}
+        <a class="close" style="display:block; text-decoration: none;" onclick="closeFunction()">&times;</a>
+        </div>
+    {% endfor %}
+
+
+
+    <span id="getDetails" >
+
+
+        <h1 id="touch">Sign Up!</h1 > <form action="/add_new_user"  method="POST">
+
+        <label for="full name"  class="lables" id="full name label" >full name</label> <br>
+        <input type="text" id="full name" class="data" name="full name" autocomplete="on" placeholder="first last" pattern="[a-zA-Z ]{1,40}" required><br><br>
+
+
+
+        <label for="birthDate"  class="lables" id="birthDate" >date of birth</label> <br>
+        <input type="date" id="txtDate" name="birthDate"/>
+        <br><br>
+
+
+        <label for="email"  class="lables" id="email label">Email Address</label><br>
+        <input type="email" id="email" class="data" name="email" placeholder="example@example.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+        <br><br>
+
+        <label for="phone" id="phone lable" class="lables">Phone number</label><br>
+       <input onclick="typeWriter()" type="tel" id="phone"class="data" name="phone" placeholder="0525555555" pattern="[0-9]{10}"required><br><br>
+
+          <label for="usrname">Username</label>
+          <br>
+          <input type="text" id="usrname" name="usrname" minlength="5" maxlength="10" placeholder="5-10 chars only" required>
+          <br><br>
+          <label for="psw">Password</label>
+          <br>
+         <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  onkeyup='check1();' required>
+          <br><br>
+          <label for="confirm_password">confirm password </label>
+              <br>
+            <input type="password" name="confirm_password" id="confirm_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onkeyup='check1();' required /> <br><br>
+          <span id="matched"></span>
+
+
+      <br> <br>
+      <label>I want to get special offers and discount to my email
+        <input type="checkbox" id="checkbox" ><br>
+      <span id="submitClick">
+        <button id="submitContact" class="click" >submit details</button><br>
+      </span>
+
+
+      <p id="errorMessage"></p>
+      <span id='message1'></span>
+
+      <div id="message">
+        <h3>Password must contain the following:</h3>
+        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+        <p id="number" class="invalid">A <b>number</b></p>
+        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+      </div>
+            <br>
+
+      </label>
+
+</form>
+</span>
+
+<span id="signInConfirm" style="display:none">
+<h1>Your details have been successfully added.</h1><br>
+  <p> We're glad you chose to be our customer</p>
+<button class="logInButton" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Click here to Log In</button>
+</span><br><br><br>
+
+
+
+{% endblock %}
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('signUp.static', filename='js/signUp.js') }}"></script>
+{% endblock %}

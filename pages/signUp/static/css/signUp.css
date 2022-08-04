@@ -1,0 +1,83 @@
+Body{
+    background-image: url(../media/backGroundBetonT2.jpg);
+}
+
+#getDetails, #signInConfirm {
+    display: table;
+    margin: 0 auto;
+    color:var(--lightgreen) ;
+    font-size :16px;
+    text-align: center;
+    font-family:font2;
+    padding: 60px;
+    background-color: white;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.7;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+input{
+    padding: 20px;
+    width: 300px;
+    height: 6px;
+    background-color:white;
+    color: var(--green);
+    text-align: center;
+    border-radius: 7px;
+    border: 1px solid rgb(176, 176, 176);
+    box-shadow: 4px 4px 4px;
+
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+  #message p {
+    padding: 10px 35px;
+    font-size: 18px;
+  }
+
+  /* Add a green text color and a checkmark when the requirements are right */
+  .valid {
+    color: green;
+  }
+
+  .valid:before {
+    position: relative;
+    left: -35px;
+    content: "\2714";
+  }
+
+  /* Add a red text color and an "x" icon when the requirements are wrong */
+  .invalid {
+    color: red;
+    content: "\2716";
+  }
+
+  .invalid:before {
+    position: relative;
+    left: -35px;
+    content: "\2716";
+  }
+
+  #checkbox{
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+  }

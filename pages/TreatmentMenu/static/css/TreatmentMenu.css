@@ -1,0 +1,193 @@
+:root {
+
+    --darkWhite4 : rgb(187, 199, 192);
+        --green:rgb(41, 77, 44);
+        --darkgreen:rgb(9, 63, 33);
+        --darkgreen2:rgb(43, 74, 57);
+        --darkgreen3: rgb(138, 138, 112);
+        --darkWhite : rgb(232, 226, 226);
+        --darkWhite2 : rgb(107, 135, 119);
+        --darkWhite3 : rgb(117, 141, 127);
+        --lightgreen : rgb(70, 101, 82);
+        --White : rgb(255, 255, 255);
+        --grey : rgb(165, 178, 171);
+
+}
+
+
+
+body{
+  background-image: url(../media/backGroundBetonT13.jpg);
+}
+
+
+
+
+
+
+
+.DIVGREEN{
+background-color: Var(--darkWhite4);
+width: auto;
+height: 310px;
+position: relative;
+}
+
+
+
+
+
+
+
+.DIVWHITE{
+    background-color: Var(--White);
+    width: auto;
+    height: 310px;
+    position: relative;
+    }
+
+
+.treatmentimgs {
+    float: right;
+    position: absolute;
+        right: 0px;
+        border: 4px solid var(--darkWhite3);
+        padding: 10px;
+        margin: 2px;
+
+}
+
+.treatmenttext {
+    position: absolute;
+    top: 10%;
+    width: 40%;
+    text-align: center;
+    font-size: 18px;
+    right:40%;
+    font-family:font2;
+}
+
+.treatmenttextHEDER{
+    font-size: 30px;
+}
+
+
+#container{
+
+    display: grid;
+    grid-template-areas:
+    'treatmenttext DIVWHITE'
+    'treatmenttext DIVGREEN'
+    'treatmenttext DIVWHITE'
+    'treatmenttext DIVGREEN'
+    'treatmenttext DIVWHITE'
+    'treatmenttext DIVGREEN'
+
+}
+
+
+
+  /* The Modal (background) */
+.modalD {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-contentD {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-image: url(../media/backGroundBetonT8.jpg);
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+  }
+
+  /* The Close Button */
+  .closeD {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .closeD:hover,
+  .closeD:focus {
+    color:  black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+ .price_list {
+
+  text-align: left;
+    font-size: 18px;
+   left:40%;
+    font-family:font2;
+
+ }
+
+
+ .inpTEXT{
+ margin-left: 10%;
+  text-align: left;
+  font-size: 22px;
+  font-family:font2;
+
+
+ }
+
+
+ #inpTEXTtitle{
+  font-size: 28px;
+  margin-left: 10%;
+  text-align: left;
+  font-family:font2;
+  text-decoration: underline ;
+ }
+
+
+ #Modalbtn {
+margin-left: 20%;
+
+
+ }
+
+
+ .price_list form input[type="radio"]:checked:after {
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  top: -4px;
+  left: -1px;
+  position: relative;
+  background-color: var(--darkgreen2);
+  visibility: visible;
+  border: 3px solid var(--grey);
+}
+
+.price_list form input[type="radio"]:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -4px;
+  left: -1px;
+  position: relative;
+  background-color: white;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 3px solid var(--grey);
+}

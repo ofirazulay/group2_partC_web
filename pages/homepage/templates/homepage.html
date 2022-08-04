@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'homepage' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('homepage.static', filename='css/homepage.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+
+     {% for category, message in get_flashed_messages(with_categories=True) %}
+        <div class="{{category}}" id="alertDiv">
+        <h3> {{category}}:</h3>
+        <h4 id="flashed_messages">{{ message }}</h4>
+        <a class="close" style="display:block; text-decoration: none;" onclick="closeFunction()">&times;</a>
+        </div>
+    {% endfor %}
+
+
+<div class="homeContainer">
+    <div class="logoGif" ><img src="{{ url_for('homepage.static', filename='media/animatedLogo.gif') }}" alt=""style="width:450px" > </div>
+
+
+    <div class="textHome">
+        <h id="Welcome">Welcome</h><br>
+        Welcome to a world of bliss, where our warm and experienced
+        therapists take care of you from the moment you arrive. This is your invitation to relax, recharge and escape the outside world.
+        <br><button id="learn more" class="click" onclick="location.href='aboutUs'">learn more</button><br></div>
+
+</div><br><br><br>
+<div id="homeIma"><img class="imHome" src="{{ url_for('homepage.static', filename='media/pic1.jpg') }}" alt=""style="width:410px" ><img class="imHome"  src="{{ url_for('homepage.static', filename='media/pic2.jpg') }}" alt=""style="width:410px" ><img class="imHome"  src="{{ url_for('homepage.static', filename='media/pic4.jpg') }}" alt=""style="width:410px" >
+</div> <br><br>
+
+
+
+
+</div>
+          <!------------------------------------------- end home body ------------------------------------------->
+
+
+
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('homepage.static', filename='js/homepage.js') }}"></script>
+{% endblock %}

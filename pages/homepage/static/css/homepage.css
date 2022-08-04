@@ -1,0 +1,80 @@
+:root {
+    --green:rgb(41, 77, 44);
+    --darkgreen:rgb(9, 63, 33);
+    --darkgreen2:rgb(43, 74, 57);
+    --darkgreen3: rgb(138, 138, 112);
+    --darkWhite : rgb(232, 226, 226);
+    --darkWhite2 : rgb(107, 135, 119);
+    --darkWhite3 : rgb(117, 141, 127);
+
+    --lightgreen : rgb(70, 101, 82);
+
+    --White : rgb(255, 255, 255);
+    --grey : rgb(165, 178, 171);
+}
+
+
+
+body {
+    background-image: url(../media/backGroundBetonT15.jpg);
+}
+
+
+.logoGif{
+    grid-area: Nav;
+
+    width: 180px;
+    height: 60px;
+    align-items: center;
+    margin: 10px;
+    margin-left: 100px;
+    margin-top: 40px;
+    opacity: 0.6;
+}
+.textHome{
+    grid-area: Main;
+    text-align: left;
+    display: table;
+    margin-left: 300px;
+    color:var( --darkWhite2) ;
+    font-size :30px;
+    padding: 100px;
+    font-family: font2;
+    animation: fadeIn linear 7s;
+    -webkit-animation: fadeIn linear 4s;
+
+
+}
+
+.homeContainer{
+    display: grid;
+    grid-template-areas:
+    'Nav Main Main'
+    'Nav Main Main';
+}
+#Welcome{
+    font-size :50px;
+    color:var( --darkWhite2) ;
+
+
+}
+.imHome{
+    opacity: 0.8;
+
+}
+.imHome:hover{
+    opacity:1;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+

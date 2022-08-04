@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'myTreatments' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('myTreatments.static', filename='css/myTreatments.css') }}"/>
+
+     <link rel="stylesheet"
+              href=
+            "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+              integrity=
+                "sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+              crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+{% endblock %}
+
+{% block page_body_main_content %}
+
+    {% for category, message in get_flashed_messages(with_categories=True) %}
+        <div class="{{category}}" id="alertDiv">
+        <h3> {{category}}:</h3>
+        <h4 id="flashed_messages">{{ message }}</h4>
+        <a class="close" style="display:block; text-decoration: none;" onclick="closeFunction()">&times;</a>
+        </div>
+    {% endfor %}
+
+
+    <h1>your booked treatments</h1>
+
+
+
+    <div class="updateFormDiv">
+  <table id="table1" class="w3-table-all">
+    <thead>
+      <tr>
+          <th scope="col" style="display: none" >#</th>
+        <th scope="col" style="display: none"> <input type="text" id="myInput"  title="Type in a name">
+        </th>
+        <th scope="col">Date</th>
+        <th  scope="col">Day</th>
+        <th  scope="col">Hour</th>
+        <th  scope="col">Branch</th>
+        <th  scope="col">Therapist</th>
+          <th>Delete treatment</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for treatment in UsertreatmentsList %}
+        <tr id={{loop.index }}>
+        <td class="row-data" style="display: none"> {{ treatment.treatment_date }}</td>
+            <th style="display: none" scope="row">{{loop.index}}</th>
+          <td  class="row-data" >{{ treatment.treatment_date }}</td>
+          <td  class="row-data">{{ treatment.treatment_day }}</td>
+          <td  class="row-data">{{ treatment.treatment_hour }}</td>
+          <td  class="row-data">{{ treatment.branch_name }}</td>
+          <td  class="row-data">{{ treatment.therapist_id }}</td>
+        <td><input type="button"
+                               value="DELETE"
+                               onclick="show()" /></td>
+        </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
+
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="w3-container">
+      <div id="id02" class="w3-modal">
+        <div class="w3-modal-content">
+          <div class="w3-container">
+            <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <h1> Are you sure you want to cancel order: </h1>
+              <h4 id="replace-me"></h4>
+              <h2>Press DELETE to cancel the treatment order</h2><br>
+
+          <form action="/deleteTreatment" method="post">
+              <div style="display: none">
+
+                            <label>dateToOrder</label>
+                          <input id="dateToOrder"  class="inputBox" type="text" name="dateToDelete" ><br>
+                          <label>dayToOrder</label>
+                            <input id="dayToOrder" class="inputBox" type="text" name="dayToDelete" ><br>
+                         <label>hourToOrder</label>
+                          <input id="hourToOrder" class="inputBox" type="text" name="hourToDelete"  ><br>
+                         <label>branchToOrder</label>
+                          <input id="branchToOrder" class="inputBox" type="text" name="branchToDelete" ><br>
+                        <label>TetapistToOrder</label>
+                          <input id="TetapistToOrder" class="inputBox" type="text" name="TetapistToDelete"  ><br>
+                    </div>
+                      <input class="inputBox" id="regBot" type="submit" value="DELETE TREATMENT">
+              </form>
+              </div>
+            </div>
+          </div>
+        </div><br>
+
+    </div>
+
+
+
+
+            <br>
+          <br>
+
+          <button id="addTreat" class="addTreat" onclick="chooseKindShow()" >Order additional treatment</button>
+        <span id="chooseKind">
+
+        <form action="/orderTreatment" method="POST">
+                            <select id="kindsList" list="Choosekind" name="Choosekind" placeholder="choose treatment" required onchange="GetSelect()"><br>
+                                <option value="reflexology">Reflexology</option>
+                                <option value="Chinese Acupuncture">Chinese acupuncture</option>
+                                <option value="Shiatsu">Shiatsu</option>
+                                </select>
+
+
+            <button id="Search"  class="btn" >Search For Treatment</button>
+
+    </form>
+             <button id="cancleOrder" onclick="chooseKindHide()">cancel</button>
+        <br>
+        <br>
+            </span>
+    <br><br>
+
+
+{##}
+{#    <button id="ShowAllBtn"  class="btnTEXT" >Show all </button>#}
+{#    <button id="b" class="btnTEXT" onclick="sortByDate()"> closest date possible</button>#}
+    <!-- <button id="ShowNearestBranchBtn"  onclick="GetLocation()" sclass="btnTEXT" > The nearest branch</button>
+    <p id="p1"></p> -->
+{#    <button id="button" class="btnTEXT" onclick="GetLocation()" >The nearest branch </button>#}
+
+
+
+
+
+  </div>
+
+</div>
+
+
+{% endblock %}
+
+{% block page_body_footer %}{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('myTreatments.static', filename='js/myTreatments.js') }}"></script>
+{% endblock %}

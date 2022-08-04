@@ -1,0 +1,224 @@
+Body{
+  background-image: url(../media/backGroundBetonT13.jpg);
+}
+
+h1{
+  text-align: center;
+  font-size: 50px;
+  font-family: font2;
+  padding-top: 30px;
+  color: #3d5d4a;
+
+}
+
+
+
+
+
+
+#HomeIcon{
+  float: right;
+  color:var(--White);
+  font-size: 35px;
+}
+
+
+#table1 {
+display: table;
+margin: auto;
+margin-top: 20px;
+border-collapse: collapse;
+width: 50%;
+}
+
+#table2 , .addTreat , #chooseKind, #cancleOrder,#Search{
+  display: table;
+  margin: auto;
+  margin-top: 10px;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+.addTreat{
+    width: 20%;
+}
+
+th{
+  background-color:var(--lightgreen);
+  color:var(--White);
+  font-family: font2;
+
+}
+
+#chooseKind, #cancleOrder,#Search{
+  display: none;
+  width: 45%;
+
+}
+
+#confirm_Choosekind{
+  width: 30%;
+
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 2px solid rgb(44, 81, 49);
+  font-family: font2;
+}
+
+
+tr:hover {
+    background-color:var(--White);
+    opacity: 0.8;
+}
+
+.btnTEXT {
+background-color: var(--darkWhite);
+font-size :15px;
+font-family:font2;
+border:2px solid var(--darkWhite3);
+border-radius: 3px;
+color: black;
+cursor: pointer;
+width: 30%;
+margin-bottom: 10px;
+}
+
+.btnTEXT :hover{
+transform: translateY(2px);
+}
+
+.btnTEXT :focus{
+background-color:rgb(107, 35, 190);
+}
+
+
+
+.SelectButs,.remoneButs, .addTreat,#Search, #confirm_Choosekind, #cancleOrder{
+  background-color: var(--darkWhite3);
+  font-size :20px;
+  font-family:font2;
+  border:5px solid var(--darkWhite3);
+  border-radius: 10px;
+  color: var(--darkWhite);
+  cursor: pointer;
+
+}
+
+#cancleOrder, .remoneButs{
+  background-color:rgb(143, 66, 66);
+  border:5px solid rgb(143, 66, 66);
+
+}
+
+.SelectButs {
+background-color:var(--grey);
+  border:2px solid var(--darkWhite);
+  font-size :15px;
+  color: black;
+
+}
+
+
+.remoneButs{
+  font-size :15px;
+
+}
+
+#kindsList{
+border-radius: 8px;
+width: 120%;
+font-size :17px;
+text-align: center;
+padding: 10px;
+font-family: font2;
+margin-left: -8%;
+}
+
+option {
+font-family: font2;
+font-size :13px;
+
+}
+.btn :hover{
+  transform: translateY(2px);
+}
+
+
+/* The Modal (background) */
+.modalB {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-contentB {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-image: url(backGroundBetonT8.jpg);
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+/* The Close Button */
+.close2 , .close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close2 ,.close :hover,
+.close, .close2:focus {
+  color:  black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+.title{
+  font-size: 18px;
+  margin-left: 2%;
+  text-align: left;
+  font-family:font2;
+ }
+
+ #MISSING {
+  text-align: center;
+ }
+
+ h1{
+   text-align: center;
+  padding: 30px;
+  color:rgb(49, 74, 51);
+  font-size: 30px;
+ }
+
+ tr:active{
+  background-color:rgb(165, 96, 96);
+
+ }
+
+ #remove_button{
+  background-color:rgb(165, 96, 96);
+
+ }
+ #explanationn{
+  text-align: center;
+}

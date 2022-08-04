@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'TreatmentMenu' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('TreatmentMenu.static', filename='css/TreatmentMenu.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+
+
+
+
+
+   <br><br><br><div id="container">
+
+     <div class="DIVGREEN" >
+        <span class="treatmentimgs">
+            <img class="imHome" src="{{ url_for('TreatmentMenu.static', filename='media/Shiatsuimg.jpeg') }}" alt=""style="width:410px" >
+        </span>
+
+
+
+    </div>
+        <span class="treatmenttext">
+            <br><br><br><br><h1 class="treatmenttextHEDER">  Shiatsu therapy </h1>
+            Shiatsu therapy is designed to open the blockages in the meridians, direct the energy and affect the muscular, nervous  systems of the body. it can lead to a process of self-healing in which the body releases chemicals with anti-inflammatory that facilitate movement and evoke a feeling of relaxation
+            <br> <br>
+
+        </span>
+        </div>
+
+
+    <div class="DIVWHITE" >
+        <span class="treatmentimgs">
+            <img class="imHome" src="{{ url_for('TreatmentMenu.static', filename='media/ChineseIMG.jpg') }}" alt=""style="width:410px" >
+        </span>
+        <span class="treatmenttext">
+            <h1 class="treatmenttextHEDER">  Chinese acupuncture  </h1>
+        Chinese acupuncture - is one of the cornerstones of ancient Chinese medicine. The treatment is performed by inserting delicate disposable needles on top of energy points in the body.
+        <br> <br>
+
+
+    </span>
+    </div>
+
+
+
+    <div class="DIVGREEN" >
+        <span class="treatmentimgs">
+            <img class="imHome" src="{{ url_for('TreatmentMenu.static', filename='media/reflexologyImg.jpg') }}" alt=""style="width:410px" >
+        </span>
+
+
+
+
+        <span class="treatmenttext">
+            <h1 class="treatmenttextHEDER">  Reflexology  </h1>
+        Reflexology is a method of diagnosis and treatment in alternative medicine. This method is based on a pseudo-scientific assumption that points and areas in the foot represent a "map" of all organs and systems of the body. Through observation and touch of the foot, defects in various body systems can be diagnosed and treated.
+        <br> <br>
+    </span>
+<br><br>
+    </div><br><br>
+
+
+</div>
+
+    <!------------------------------------------- MODAL POP UP ------------------------------------------->
+
+<!-- The Modal -->
+<div id="myModalD" class="modalD">
+
+  <!-- Modal content -->
+  <div  class="modal-contentD">
+    <span class="closeD">&times;</span>
+
+
+    <div class="price_list">
+        <h4  id="inpTEXTtitle" >MENU:</h4>
+        <form  method="post" >
+            <mainModel>
+
+
+        </mainModel>
+
+        <div id=" Shiatsu_div" >
+          <!-- Shiatsu - single treatment -->
+             <input type="radio" id="Shiatsu1" name="Treatment" value="Shiatsu1"  required onclick="checkPrice()" checked >
+              <label for="Shiatsu1"  class="inpTEXT">
+             Shiatsu - single treatment
+             </label><br>
+             <!-- Shiatsu - 10 treatments -->
+             <input type="radio" id="Shiatsu10" name="Treatment" value="Shiatsu10" onclick="checkPrice()"  >
+             <label for="Shiatsu10" class="inpTEXT">
+               Shiatsu - 10 treatments
+              </label><br>
+</div>
+<div id=" Chinese_div" >
+
+    <input type="radio" id="Chinese1" name="Treatment" value="Chinese1" onclick="checkPrice()" >
+          <label for="Chinese1"  class="inpTEXT">
+            Chinese acupuncture - single treatment
+          </label><br>
+
+          <input type="radio" id="Chinese10" name="Treatment" value="Chinese10"  onclick="checkPrice()" >
+          <label for="Chinese10"  class="inpTEXT">
+            Chinese acupuncture - 10 treatments
+        </label><br>
+</div>
+
+<div id=" Reflexology_div" >
+          <input type="radio" id="Reflexology1" name="Treatment" value="Reflexology1" onclick="checkPrice()" >
+          <label for="Reflexology1"  class="inpTEXT">
+            Reflexology - single treatment
+          </label><br>
+
+          <input type="radio" id="Reflexology10" name="Treatment" value="Reflexology10"  onclick="checkPrice()" >
+          <label for="Reflexology10"  class="inpTEXT">
+            Reflexology - 10 treatments
+        </label><br>
+            <br>
+</div>
+
+
+
+    </form>
+<br><br>
+
+         <br> <label  class="inpTEXT" id="price">Price: 160 ILS </label><br>
+
+
+
+
+
+  <div class="purchase_btn" id="Modalbtn">
+        <br> <br><button  class="click" onclick="window.location = 'paymentPage.html#jump'" >Quick purchase</button><br>
+      </div>
+
+
+
+
+  </div>
+  </div>
+
+</div>
+
+{% endblock %}
+
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('TreatmentMenu.static', filename='js/TreatmentMenu.js') }}"></script>
+{% endblock %}

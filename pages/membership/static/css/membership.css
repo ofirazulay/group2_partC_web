@@ -1,0 +1,195 @@
+Body{
+  background-image: url(../media/backGroundBetonT13.jpg);
+}
+
+h1{
+  text-align: center;
+  font-size: 50px;
+  font-family: font2;
+  padding-top: 30px;
+  color: #3d5d4a;
+
+}
+
+#submitContact{
+    display: table;
+    margin: auto;
+    margin-top: 30px;
+    border-collapse: collapse;
+    background-color: var(--darkWhite3);
+    font-size :20px;
+    font-family:font2;
+    border:5px solid var(--darkWhite3);
+    border-radius: 10px;
+    color: var(--darkWhite);
+    cursor: pointer;
+    width: 25%;
+}
+
+
+table, #purchaseMore{
+    display: table;
+    margin: auto;
+    margin-top: 30px;
+    border-collapse: collapse;
+    width: 50%;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid rgb(44, 81, 49);
+  }
+
+
+  tr:hover {
+      background-color:var(--White);
+      opacity: 0.8;
+}
+th{
+    background-color:var(--lightgreen);
+    color:var(--White);
+
+  }
+
+#purchaseMore{
+    background-color: var(--darkWhite3);
+    font-size :20px;
+    font-family:font2;
+    border:5px solid var(--darkWhite3);
+    border-radius: 10px;
+    color: var(--darkWhite);
+    cursor: pointer;
+    width: 25%;
+
+}
+
+#purchaseMore:hover{
+    transform: translateY(2px);
+}
+
+
+h1{
+    text-align: center;
+   padding: 30px;
+   color:rgb(49, 74, 51);
+   font-size: 20px;
+
+  }
+
+  .modalD {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-contentD {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-image: url(../media/backGroundBetonT13.jpg);
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+  }
+
+  /* The Close Button */
+  .closeD {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .closeD:hover,
+  .closeD:focus {
+    color:  black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+ .price_list {
+
+  text-align: left;
+    font-size: 18px;
+   left:40%;
+    font-family:font2;
+
+ }
+
+
+ .inpTEXT{
+ margin-left: 10%;
+  text-align: left;
+  font-size: 22px;
+  font-family:font2;
+
+
+ }
+
+
+ #inpTEXTtitle{
+  font-size: 28px;
+  margin-left: 10%;
+  text-align: left;
+  font-family:font2;
+  text-decoration: underline ;
+ }
+
+
+ #Modalbtn {
+margin-left: 20%;
+
+
+ }
+
+
+ .price_list form input[type="radio"]:checked:after {
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  top: -4px;
+  left: -1px;
+  position: relative;
+  background-color: var(--darkgreen2);
+  visibility: visible;
+  border: 3px solid var(--grey);
+}
+
+.price_list form input[type="radio"]:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -4px;
+  left: -1px;
+  position: relative;
+  background-color: white;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 3px solid var(--grey);
+}
+
+input{
+    padding: 15px;
+    width: 100px;
+    height: 6px;
+    background-color:white;
+    color: var(--green);
+    text-align: center;
+    border-radius: 7px;
+    border: 1px solid rgb(176, 176, 176);
+    box-shadow: 4px 4px 4px;
+
+}

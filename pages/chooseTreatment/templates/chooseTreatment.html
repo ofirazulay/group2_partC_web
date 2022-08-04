@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% set page_head_title = 'choose Treatmet' %}
+
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('chooseTreatment.static', filename='css/chooseTreatment.css') }}"/>
+
+     <link rel="stylesheet"
+              href=
+            "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+              integrity=
+                "sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+              crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{% endblock %}
+
+{% block page_body_main_content %}
+
+    <div id="myModalB" class="modalB">
+  <!-- Modal content -->
+  <div class="modal-contentB" id="innerModal">
+    <br> <label  class="title" id="TypeOf"> </label><br>
+    <h4  class="title" >How Do You Want To Filter?</h4>
+
+
+    <form action="/filteredTreatment" method="post">
+     <select id="branch" list="branch" name="branch" placeholder="Choose Branch" ><br>
+                            <option>All</option>
+
+                               <option>Beersheba Spa</option>
+                                <option>Haifa Spa</option>
+                                <option>Sea Spa TLV</option>
+                                <option>The red spa</option>
+                                </select>
+     <select id="day" list="day" name="day" placeholder="Choose your desired day" ><br>
+                            <option>All</option>
+
+                                <option>Sunday</option>
+                                <option>Monday</option>
+                                <option>Tuesday</option>
+                                <option>Wednesday</option>
+                                <option>Thursday</option>
+                                </select>
+      <input type="submit" value="FILTER">
+
+     <button id="ShowNearestBranchBtn"  onclick="GetLocation()" sclass="btnTEXT" > The nearest branch</button>
+
+    </form>
+
+
+ </div>
+    </div>
+
+
+
+{#newwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww#}
+<h1>optional treatments</h1>
+ <div class="updateFormDiv">
+  <table id="results" class="w3-table-all">
+    <thead>
+      <tr>
+          <th scope="col" style="display: none" >#</th>
+        <th scope="col" style="display: none"> <input type="text" id="myInput"  title="Type in a name">
+        </th>
+        <th scope="col">Date</th>
+        <th  scope="col">Day</th>
+        <th  scope="col">Hour</th>
+        <th  scope="col">Branch</th>
+        <th  scope="col">Therapist</th>
+          <th>order</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for optionalTreatment in availableSlots %}
+        <tr id={{loop.index }}>
+        <td class="row-data" style="display: none"> {{ optionalTreatment.treatment_date }}</td>
+            <th style="display: none" scope="row">{{loop.index}}</th>
+          <td  class="row-data" >{{ optionalTreatment.treatment_date }}</td>
+          <td  class="row-data">{{ optionalTreatment.treatment_day }}</td>
+          <td  class="row-data">{{ optionalTreatment.treatment_hour }}</td>
+          <td  class="row-data">{{ optionalTreatment.branch_name }}</td>
+          <td  class="row-data">{{ optionalTreatment.full_name }}</td>
+        <td><input type="button"
+                               value="ORDER"
+                               onclick="show()" /></td>
+        </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+ </div>
+
+
+{#confirm order#}
+     <div class="w3-container">
+      <div id="id02" class="w3-modal">
+        <div class="w3-modal-content">
+          <div class="w3-container">
+            <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <h1> The chosen treatment: </h1>
+              <h4 id="replace-me"></h4>
+              <h2>Press ORDER TREATMENT to confirm the order</h2><br>
+
+          <form action="/orderNewTreatment" method="post">
+              <div style="display: none">
+
+                            <label>dateToOrder</label>
+                          <input id="dateToOrder"  class="inputBox" type="text" name="dateToOrder" ><br>
+                          <label>dayToOrder</label>
+                            <input id="dayToOrder" class="inputBox" type="text" name="dayToOrder" ><br>
+                         <label>hourToOrder</label>
+                          <input id="hourToOrder" class="inputBox" type="text" name="hourToOrder"  ><br>
+                         <label>branchToOrder</label>
+                          <input id="branchToOrder" class="inputBox" type="text" name="branchToOrder" ><br>
+                        <label>TetapistToOrder</label>
+                          <input id="TetapistToOrder" class="inputBox" type="text" name="TetapistToOrder"  ><br>
+                    </div>
+                      <input class="inputBox" id="regBot" type="submit" value="ORDER TREATMENT">
+              </form>
+              </div>
+            </div>
+          </div>
+        </div><br>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            {% endblock %}
+
+
+{% block page_body_footer %}{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('chooseTreatment.static', filename='js/chooseTreatment.js') }}"></script>
+{% endblock %}

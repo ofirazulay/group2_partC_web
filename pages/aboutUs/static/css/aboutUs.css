@@ -1,0 +1,256 @@
+:root {
+    --green:rgb(41, 77, 44);
+    --darkgreen:rgb(9, 63, 33);
+    --darkgreen2:rgb(43, 74, 57);
+    --darkgreen3: rgb(138, 138, 112);
+    --darkWhite : rgb(232, 226, 226);
+    --darkWhite2 : rgb(107, 135, 119);
+    --darkWhite3 : rgb(117, 141, 127);
+
+    --lightgreen : rgb(70, 101, 82);
+
+    --White : rgb(255, 255, 255);
+    --grey : rgb(165, 178, 171);
+}
+
+
+
+body{
+  background-image: url(../media/backGroundBetonT1.jpg);
+}
+
+.container_about_us {
+    display: flex;
+    width: 100%;
+    padding: 4% 2%;
+    box-sizing: border-box;
+    height: 100vh;
+  }
+
+.box {
+    flex: 1;
+    overflow: hidden;
+    transition: .5s;
+    margin: 0 2%;
+    box-shadow: 0 20px 30px rgba(0,0,0,.1);
+    line-height: 0;
+  }
+
+.box > img {
+    width: 200%;
+    height: calc(100% - 10vh);
+    object-fit: cover;
+    transition: .5s;
+  }
+
+.box > span {
+    font-size: 3.8vh;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    line-height: 2.6;
+}
+
+.box:hover { flex: 1 1 50%; }
+.box:hover > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #aboutUsText {
+    align-items: center;
+    margin: 50px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    margin-left: 35%;
+   color:white;
+   background-color:var(--grey);
+   text-align: center;
+   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+   opacity: 0.8;
+   border-radius: 20px;
+   padding: 50px;
+   font-size: 18px;
+   width: 60%;
+}
+
+#OurTreatmentsLable{
+  font-size :50px;
+  color:var(--White) ;
+  text-align: center;
+background-color:var(--darkgreen2);
+opacity: 0.7;
+}
+.branchesnDiv{
+  background-image:url(../media/mapImagBackround2.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  text-align: center;
+  padding: 100px;
+  color: var(--lightgreen);
+
+}
+
+
+#locationLable{
+font-size:60px ;
+}
+
+#branchesnDivexp, #locationDiv{
+grid-area: exp;
+font-family: font2;
+padding: 20px;
+font-size: 20px;
+padding-top: 130px;
+text-align: center;
+color: rgb(68, 72, 69);
+
+}
+
+
+
+#locationDiv{
+  display: grid;
+  grid-template-areas:
+  'exp ima';
+  z-index: 0;
+  text-align: left;
+}
+
+#map {
+grid-area: ima;
+padding: 20px;
+height: 350%;
+width: 100%;
+display: ruby;
+position: absolute;
+bottom: 30%;
+left: 20%;
+    /* bring your own prefixes */
+transform: translate(-50%, -50%);
+z-index: 2;
+top: 1px;
+}
+
+
+
+
+
+
+body{
+  background-image: url(../media/backGroundBetonT1.jpg);
+}
+
+.container_about_us {
+    display: flex;
+    width: 100%;
+    padding: 4% 2%;
+    box-sizing: border-box;
+    height: 100vh;
+  }
+
+  .box {
+    flex: 1;
+    overflow: hidden;
+    transition: .5s;
+    margin: 0 2%;
+    box-shadow: 0 20px 30px rgba(0,0,0,.1);
+    line-height: 0;
+  }
+
+  .box > img {
+    width: 200%;
+    height: calc(100% - 10vh);
+    object-fit: cover;
+    transition: .5s;
+  }
+
+  .box > span {
+    font-size: 3.8vh;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    line-height: 2.6;
+  }
+
+  .box:hover { flex: 1 1 50%; }
+  .box:hover > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #aboutUsText {
+    align-items: center;
+    margin: 50px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    margin-left: 35%;
+   color:white;
+   background-color:var(--grey);
+   text-align: center;
+   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+   opacity: 0.8;
+   border-radius: 20px;
+   padding: 50px;
+   font-size: 18px;
+   width: 60%;
+}
+
+#OurTreatmentsLable{
+  font-size :50px;
+  color:var(--White) ;
+  text-align: center;
+background-color:var(--darkgreen2);
+opacity: 0.7;
+}
+.branchesnDiv{
+  background-image:url(../media/mapImagBackround2.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  text-align: center;
+  padding: 100px;
+  color: var(--lightgreen);
+
+}
+
+
+#locationLable{
+font-size:60px ;
+}
+
+#locationDiv{
+grid-area: exp;
+font-family: font2;
+padding: 20px;
+font-size: 20px;
+padding-top: 130px;
+text-align: center;
+color: rgb(68, 72, 69);
+
+}
+
+
+
+#locationDiv{
+  display: grid;
+  grid-template-areas:
+  'exp ima';
+  z-index: 0;
+  text-align: left;
+}
+
+#map {
+grid-area: ima;
+padding: 20px;
+height: 350%;
+width: 100%;
+display: ruby;
+position: fixed;
+bottom: 30%;
+left: 20%;
+    /* bring your own prefixes */
+transform: translate(-50%, -50%);
+z-index: 2;
+}

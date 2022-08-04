@@ -1,0 +1,96 @@
+@import "variables.css";
+
+:root {
+    --green:rgb(41, 77, 44);
+    --darkgreen:rgb(9, 63, 33);
+    --darkgreen2:rgb(43, 74, 57);
+    --darkgreen3: rgb(138, 138, 112);
+    --darkWhite : rgb(232, 226, 226);
+    --darkWhite2 : rgb(107, 135, 119);
+    --darkWhite3 : rgb(117, 141, 127);
+
+    --lightgreen : rgb(70, 101, 82);
+
+    --White : rgb(255, 255, 255);
+    --grey : rgb(165, 178, 171);
+}
+
+body {
+    margin: 0;
+        background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+@font-face{
+    font-family: font1;
+    src: url(../media/MPLUSCodeLatin-VariableFont_wdth,wght.ttf)
+}
+
+
+
+
+@font-face{
+    font-family: font2;
+    src: url(../media/SignikaNegative-VariableFont_wght.ttf)
+}
+
+@font-face{
+    font-family: font3;
+    src: url(../media/ZenLoop-Regular.ttf)
+}
+
+       button:hover {
+          transform: translateY(5px);
+        }
+button, .click{
+width: 180px;
+background-color: var(--darkWhite3);
+font-size :20px;
+font-family:font2;
+border:5px solid var(--darkWhite3);
+border-radius: 10px;
+color: var(--darkWhite);
+      }
+
+
+/* alert style */
+
+
+#flashed_messages{
+font-family:Quicksand;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+.error,.success {
+  width:50%;
+  margin:20px auto;
+  padding:30px;
+  position:relative;
+  border-radius:5px;
+  box-shadow:0 0 15px 5px #ccc;
+    z-index: 1;
+}
+.success {
+	background-color: #84af8b;
+}
+.error{
+	background-color: #d25c5c;
+}
+
+.close{
+  position:absolute;
+  width:30px;
+  height:30px;
+  opacity:0.5;
+  right:15px;
+  top:25px;
+  text-align:center;
+  font-size:1.6em;
+  cursor:pointer;
+}
+
+#alertDiv{
+	text-align: center;
+}

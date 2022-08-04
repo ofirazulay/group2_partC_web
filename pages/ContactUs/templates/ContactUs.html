@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'ContactUs' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('ContactUs.static', filename='css/ContactUs.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+
+
+
+
+<div id="getDetailsContact"  >
+
+    <div id="myInputs">
+
+
+
+        <h1  id="touch">Get in touch.</h1>
+             <form action="/add_contact_Data" method="post">
+
+        <label for="Full name"  class="lables" id="full name label" >Full name</label> <br>
+        <input type="text" id="Full name" class="dataContact"  name="Full name" placeholder="Full last" autocomplete="on" required><br><br>
+
+        <label for="email"  class="lables" id="email label">Email Address</label><br>
+        <input type="email" id="email" class="dataContact" name="email" placeholder="example@example.com" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><br><br>
+
+        <label for="phone" id="phone lable" class="lables">Phone number</label><br>
+       <input  type="tel" id="phone"class="dataContact" name="phone" placeholder="0525555555" pattern="[0-9]{10}"required><br><br>
+
+
+
+       <label for="freeTextContact"  class="lables" id="freeTextContact label" >How can we help you?</label> <br>
+        <input type="text" id="freeTextContact" class="dataContact" name="freeTextContact"placeholder="maximum 500 char" maxlength="500" ><br><br>
+
+
+    <span id="submitClick">
+        <button id="submitContact" class="click" >send request</button><br>
+    </span>
+    </form>
+
+
+    <p id="ConfirmMessage"></p>
+    <br><button id="backToHomeContact" class="click" style="display:none" onclick="window.location = 'homePageProject.html#jump'" >Back To Home Page</button><br></div>
+
+
+
+</div>
+ <br><br><br>
+</div>
+
+{% endblock %}
+
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('ContactUs.static', filename='js/ContactUs.js') }}"></script>
+{% endblock %}

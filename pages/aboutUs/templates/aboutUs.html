@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'aboutUs' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('aboutUs.static', filename='css/aboutUs.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+
+ <div id="aboutUsText">
+    <h1 id="touch">who we are</h1>
+
+    <p>WEBNESS is a luxury health and spa complex, brings to Israel a unique spa
+       experience with a traditional Chinese character and exceptional personal service.
+       In an authentic atmosphere that combines the smells, design and mentality of Royal
+       China. The complex offers a wide range of services that gives each guest an experience
+       that is all health and rejuvenation of body and mind. The health and spa complex - WEBNESS
+       invites you to enjoy a variety of traditional and modern treatments performed by professional
+       therapists in a particularly magical and authentic atmosphere.
+        </p>
+      </div>
+
+    <h2 id="OurTreatmentsLable" >Our treatments</h2>
+
+    <div class="container_about_us">
+        <div class="box">
+          <img src="{{ url_for('aboutUs.static', filename='media/img_chinesedikor.jpg') }}">
+          <span>Chinese Acupuncture</span>
+        </div>
+
+        <div class="box">
+          <img src="{{ url_for('aboutUs.static', filename='media/img_reflexologic.jpg') }}">
+          <span>Reflexology</span>
+        </div>
+
+        <div class="box">
+          <img src="{{ url_for('aboutUs.static', filename='media/img_shiatzu.jpg') }}">
+          <span>Shiatsu Therapy</span>
+        </div>
+
+    </div>
+
+    <div class="branchesnDiv">
+      <h1 id="locationLable">where to find us?</h1>
+      <i class="fa fa-map-marker" aria-hidden="true" style="color:rgb(70, 101, 82);font-size: 60px;"></i>
+    </div>
+    <br><br> <br>
+    <div id="locationDiv">
+      today we have two branches around the country.
+      <br> In both we employ the best caregivers in order to provide our clients with the best service.
+      <br>
+      The first is located in Be'er Sheva in the Old City, and the second is located in the Tel Aviv port
+{#      <span id="map"></span>#}
+
+       <!--
+        The `defer` attribute causes the callback to execute after the full HTML
+        document has been parsed. For non-blocking uses, avoiding race conditions,
+        and consistent behavior across browsers, consider loading using Promises
+        with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+       -->
+{#       <script#}
+{#         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"#}
+{#         defer#}
+{#       ></script>#}
+{#       <br><br><br><br>#}
+    </div>
+
+
+{% endblock %}
+
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('aboutUs.static', filename='js/aboutUs.js') }}"></script>
+
+{% endblock %}

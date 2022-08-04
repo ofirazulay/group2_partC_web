@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'userHomePage' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('userHomePage.static', filename='css/userHomePage.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+
+
+
+
+
+    {% set pageTitle =  'Welcome ' +  session['username'] | title() %}
+
+<div>
+    {% for category, message in get_flashed_messages(with_categories=True) %}
+        <div class="{{category}}" id="alertDiv">
+        <h3> {{category}}:</h3>
+        <h4 id="flashed_messages">{{ message }}</h4>
+        <a class="close" style="display:block; text-decoration: none;" onclick="closeFunction()">&times;</a>
+        </div>
+    {% endfor %}
+ <div class="headerHello">
+        <h1 id="helloLable">{{ pageTitle}}</h1>
+        <p id="helloLablep">good to see you again!</p>
+
+      </div>
+
+</div>
+
+
+
+{#      <script type = "text/javascript">#}
+{#        function displayNextImage() {#}
+{#            x = (x === images.length - 1) ? 0 : x + 1;#}
+{#            document.getElementById("img").src = images[x];#}
+{#        }#}
+{##}
+{#        function displayPreviousImage() {#}
+{#            x = (x <= 0) ? images.length - 1 : x - 1;#}
+{#            document.getElementById("img").src = images[x];#}
+{#        }#}
+{##}
+{#        function startTimer() {#}
+{#            setInterval(displayNextImage, 2000);#}
+{#        }#}
+{#"{{ url_for('TreatmentMenu.static', filename='media/reflexologyImg.jpg') }}"#}
+{##}
+{#        var images = [], x = -1;#}
+{#        images[0] = media/pic1user.jpg ;#}
+{#        images[1] = media/pic2user.jpg;#}
+{#        images[2] = media/pic3user.jpg;#}
+{#        images[3] = media/pic4user.jpg;#}
+{#        images[4] = media/pic5user.jpg;#}
+{#        images[5] = media/pic6user.jpg;#}
+{##}
+{#    </script>#}
+{# </head>#}
+{##}
+{# <div id="imagesChange">#}
+{##}
+{#  <body id="picBody" onload = "startTimer()">#}
+{#    <img id="img" src="../static/pic6user.jpg" style="width:600px"/><br><br>#}
+{#    <button id="slideButtonleft" class="slideButton" type="button" onclick="displayPreviousImage()"><i class="fa fa-arrow-circle-o-left" aria-hidden="true" style="font-size:50px ;"></i>#}
+{#    </button>#}
+{#    <button id="slideButtonright" class="slideButton" type="button" onclick="displayNextImage()"><i class="fa fa-arrow-circle-o-right" aria-hidden="true" style="font-size:50px ;"></i></button>#}
+{#</body>#}
+{##}
+{# </div>#}
+{% endblock %}
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('userHomePage.static', filename='js/userHomePage.js') }}"></script>
+{% endblock %}

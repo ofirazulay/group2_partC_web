@@ -1,0 +1,179 @@
+
+:root {
+    --green:rgb(41, 77, 44);
+    --darkgreen:rgb(9, 63, 33);
+    --darkgreen2:rgb(43, 74, 57);
+    --darkgreen3: rgb(138, 138, 112);
+    --darkWhite : rgb(232, 226, 226);
+    --darkWhite2 : rgb(107, 135, 119);
+    --darkWhite3 : rgb(117, 141, 127);
+
+    --lightgreen : rgb(70, 101, 82);
+
+    --White : rgb(255, 255, 255);
+    --grey : rgb(165, 178, 171);
+}
+
+
+
+
+@font-face{
+    font-family: font2;
+    src: url(../media/SignikaNegative-VariableFont_wght.ttf)
+}
+
+@font-face{
+    font-family: font3;
+    src: url(../media/ZenLoop-Regular.ttf)
+}
+
+
+#paymentBody{
+    background-image: url(../media/backGroundBetonT15.jpg);
+}
+
+
+.MyHeader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color:var(--lightgreen);
+    color:var(--White);
+    text-align: center;
+    opacity: 0.7;
+
+  }
+
+
+h2{
+    text-align: center;
+    margin: 20px;
+    font-size: 25px;
+    font-family: font2;
+
+}
+.col-50 {
+  -ms-flex: 100%;
+  flex: 50%;
+
+}
+
+
+#backToHomePayment{
+margin-left: 40%;
+}
+
+#backToMenu{
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+
+
+.container {
+  padding: 5px 40px 70px 40px;
+  border-radius: 6px;
+}
+
+input[type=text],input[name="expmonth"] {
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid rgb(151, 193, 168);
+  border-radius: 10px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.12);
+  font-family: font2;
+  color: var(--lightgreen);
+}
+input:focus{
+    border: 5px solid rgba(76, 160, 96, 0.329);
+    outline:none !important;
+
+}
+
+
+label {
+  margin-bottom: 10px;
+  display: block;
+  font-family: font2;
+  color:var(--lightgreen);
+
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color:var(--darkWhite2);
+  color: white;
+  padding: 12px;
+  border: none;
+  width: 50%;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  float:right;
+
+}
+
+
+.btn:hover {
+  background-color:var(--darkgreen2);
+  transform: translateY(7px);
+  color: var(--White);
+  font-size: 18px;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+}
+
+h3{
+    font-family: font2;
+font-size: 30px;
+color:var(--darkgreen2);
+
+}
+
+
+
+
+
+
+    /* ------------------------------------------------validation-------------------------------------- */
+    /* input:not(:placeholder-shown) {
+        background: url(images/check.svg);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 20px 20px;
+    } */
+
+    .Payinputs:invalid:not(:placeholder-shown) {
+
+        background-image: url(no-icon.jpg);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position:right;
+
+      }
+
+      .Payinputs:valid:not(:placeholder-shown)  {
+
+        background-image: url(checkIcon.jpg);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position:right;
+
+      }
